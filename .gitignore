@@ -1,0 +1,11 @@
+# Keep raw/source asset dumps local. The optimized files in assets/ are used by
+# the site and are small enough to commit.
+*.zip
+*.pdf
+source-assets/
+raw-assets/
+original-assets/
+
+# Local operating system clutter.
+.DS_Store
+Thumbs.db
