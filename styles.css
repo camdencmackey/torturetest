@@ -32,24 +32,9 @@ body {
   margin: 0;
   color: var(--ink);
   background:
-    radial-gradient(circle at 15% 18%, rgba(134, 192, 121, 0.1), transparent 24rem),
     linear-gradient(180deg, #050505 0%, #0c0b0a 48%, #050505 100%);
   font-family: var(--font-body);
   letter-spacing: 0;
-}
-
-body::before {
-  position: fixed;
-  inset: 0;
-  z-index: 10;
-  pointer-events: none;
-  content: "";
-  opacity: 0.13;
-  background-image:
-    linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
-  background-size: 4px 4px;
-  mix-blend-mode: screen;
 }
 
 a {
@@ -123,14 +108,7 @@ img {
 }
 
 .hero-media::after {
-  position: absolute;
-  inset: 0;
-  content: "";
-  background:
-    linear-gradient(transparent 0 48%, rgba(211, 49, 39, 0.2) 49%, transparent 50%),
-    repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.06) 0 1px, transparent 1px 5px);
-  opacity: 0.28;
-  mix-blend-mode: screen;
+  content: none;
 }
 
 .hero-copy {
@@ -346,14 +324,6 @@ p {
   min-height: clamp(360px, 54vw, 700px);
   object-fit: cover;
   filter: contrast(1.1);
-}
-
-.art-band::after {
-  position: absolute;
-  inset: 0;
-  content: "";
-  background: linear-gradient(90deg, rgba(134, 192, 121, 0.16), transparent 28%, rgba(211, 49, 39, 0.16));
-  mix-blend-mode: screen;
 }
 
 .merch-grid article {
