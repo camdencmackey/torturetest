@@ -71,22 +71,35 @@ img {
 .nav-links {
   display: flex;
   align-items: center;
-  gap: clamp(0.75rem, 2vw, 1.5rem);
+  gap: 0.65rem;
   font-family: var(--font-display);
-  font-size: clamp(0.82rem, 1.4vw, 1.05rem);
+  font-size: 0.98rem;
   text-transform: uppercase;
 }
 
 .nav-links a {
-  color: var(--muted);
-  transition: color 160ms ease, text-shadow 160ms ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 0.75rem 0.95rem;
+  color: var(--ink);
+  background: rgba(5, 5, 5, 0.54);
+  border: 1px solid var(--line);
+  transition: transform 160ms ease, border-color 160ms ease, background 160ms ease;
 }
 
 .nav-links a:hover,
-.nav-links a:focus-visible,
-.nav-links a[aria-current="page"] {
-  color: var(--acid);
-  text-shadow: 0 0 16px rgba(134, 192, 121, 0.55);
+.nav-links a:focus-visible {
+  transform: translateY(-2px);
+  border-color: var(--acid);
+}
+
+.nav-links a[aria-current="page"],
+.nav-links a.nav-primary {
+  color: #061006;
+  background: var(--acid);
+  border-color: var(--acid);
 }
 
 .hero {
@@ -145,13 +158,6 @@ img {
   max-width: 980px;
   margin-top: clamp(1rem, 3vw, 2rem);
   filter: drop-shadow(0 2rem 2.5rem var(--shadow));
-}
-
-.hero-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.85rem;
-  margin-top: clamp(1.4rem, 3vw, 2.5rem);
 }
 
 .button {
@@ -361,12 +367,6 @@ p {
     min-height: 112px;
   }
 
-  .nav-links {
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    max-width: 220px;
-  }
-
   .hero-copy {
     padding-top: 10rem;
   }
@@ -410,10 +410,6 @@ p {
 
   .hero-media {
     background-position: 46% center;
-  }
-
-  .hero-actions {
-    display: grid;
   }
 
   .button {
